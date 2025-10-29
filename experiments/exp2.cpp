@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 #include <memory>
-#include "vec.h"
+#include "vec.hpp"
 using namespace std;
 using namespace gradlib;
 
@@ -12,11 +12,11 @@ int main() {
   default_random_engine eng(random_device{}());
 
   for(Fun& f : data.v) {
-    f = uniform_real_distribution<double>(-5, 5)(eng);
+    f = uniform_real_distribution<double>(-100, 100)(eng);
   }
 
   for(Fun& f : parameters.v) {
-    f = uniform_real_distribution<double>(-5, 5)(eng);
+    f = uniform_real_distribution<double>(-100, 100)(eng);
   }
 
   double alpha = 0.3;

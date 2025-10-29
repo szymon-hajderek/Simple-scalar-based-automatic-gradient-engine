@@ -1,6 +1,8 @@
+#pragma once
+
 #include <vector>
 #include <cassert>
-#include "fun.h"
+#include "fun.hpp"
 
 namespace gradlib {
 

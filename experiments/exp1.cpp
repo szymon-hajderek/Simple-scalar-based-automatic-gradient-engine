@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 #include <memory>
-#include "fun.h"
+#include "fun.hpp"
 using namespace std;
 using namespace gradlib;
 

@@ -25,10 +25,10 @@ add_compile_options(-O3 -Wall -Wextra -Wpedantic -Wshadow -Wconversion)
 endif()
 
 # Library from src/
-file(GLOB_RECURSE LIB_SOURCES ${CMAKE_SOURCE_DIR}/lib/*.cpp ${CMAKE_SOURCE_DIR}/lib/*.h)
-add_library(gradlib STATIC ${LIB_SOURCES})
+file(GLOB_RECURSE LIB_SOURCES ${CMAKE_SOURCE_DIR}/lib/*.cpp ${CMAKE_SOURCE_DIR}/lib/*.hpp)
 
-target_include_directories(gradlib PUBLIC ${CMAKE_SOURCE_DIR}/lib)
+add_library(gradlib INTERFACE)
+target_include_directories(gradlib INTERFACE ${CMAKE_SOURCE_DIR}/lib)
 
 # Find all executables in experiment/
 file(GLOB EXPERIMENT_SOURCES experiments/*.cpp)
